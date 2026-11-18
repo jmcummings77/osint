@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Daily Russian launch reports and Russian claims of Ukrainian drone interceptions during the full-scale invasion of Ukraine.">
+  <meta name="theme-color" content="#f7f5ee">
+  <title>Drone and missile activity in Ukraine · Fieldnotes</title>
+  <link rel="icon" href="../assets/mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/site.css">
+  <script src="../assets/air-chart.js" defer></script>
+</head>
+<body>
+  <header class="top wrap">
+    <a class="brand" href="../"><img src="../assets/mark.svg" width="33" height="33" alt="">Fieldnotes</a>
+    <a class="meta" href="../">← OSINT index</a>
+  </header>
+  <main class="wrap analysis">
+    <header class="hero">
+      <span class="meta">Ukraine · February 2022 – November 2026</span>
+      <h1>Drone and missile activity</h1>
+      <p>Russian launch counts appear above the date axis. Russian claims of Ukrainian drone interceptions appear below it.</p>
+    </header>
+    <figure class="chart" aria-labelledby="chart-description">
+      <img data-static-chart src="daily_aerial_activity_mirrored.png" alt="Mirrored chart of daily Russian drone and missile launches and Russian claims of Ukrainian drone interceptions, with 30-day moving averages.">
+      <div class="chart-interactive" data-air-chart hidden>
+        <fieldset>
+          <legend class="meta">Chart view</legend>
+          <label><input type="radio" name="chart-view" value="mirrored" checked> Mirrored</label>
+          <label><input type="radio" name="chart-view" value="panels"> Separate panels</label>
+        </fieldset>
+        <ul class="chart-key" aria-label="Chart legend">
+          <li>Russian drone and missile launches</li>
+          <li>Ukrainian drone interception claims</li>
+        </ul>
+        <canvas role="img" aria-label="Daily observations and 30-day moving averages. Use the date slider to read values."></canvas>
+        <label class="date-label">Explore by date <input type="range" min="0" step="1"></label>
+        <output></output>
+      </div>
+      <figcaption id="chart-description">Fine lines show daily reports. Bold lines show 30-day averages. Counts are positive on both sides of the mirrored chart.</figcaption>
+    </figure>
+    <section class="notes" aria-labelledby="methodology">
+      <h2 id="methodology">Reading the data</h2>
+      <p>Distance from the center shows the number of individual weapons reported. Bold lines show trailing 30-day averages where at least 21 days have observations. Blank periods indicate missing data.</p>
+      <p>Recorded Russian launch minimums begin on September 28, 2022. Russian claims of Ukrainian drone interceptions begin on July 16, 2023. Ukrainian missile launches and drones outside those claims are absent, so the two series cannot establish which side launched more weapons.</p>
+      <p>Dates follow the original reporting periods. Some Russian missile quantities were withheld, and some recent interception reports are incomplete. The CSV includes source links and quality flags for individual dates.</p>
+      <p><a href="daily_aerial_activity_with_trends.csv" download>Download daily data</a> · <a href="daily_aerial_activity_mirrored.png" download>Download chart</a></p>
+      <p>Source data by <a href="https://www.kaggle.com/datasets/piterfm/massive-missile-attacks-on-ukraine">Petro Ivaniuk</a> (<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>) and <a href="https://doi.org/10.48320/F2CA4AE9-B2D3-4B0F-8F58-6CFBDE30D39F">Lucas Alaniz Pintos, European Observatory of Drone Incidents</a> (<a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>). The combined data and chart are distributed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>.</p>
+    </section>
+  </main>
+  <footer class="foot wrap"><span>J.M. Cummings</span><a href="https://github.com/jmcummings77/osint">GitHub ↗</a></footer>
+</body>
+</html>
